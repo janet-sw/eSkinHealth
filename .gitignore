@@ -1,3 +1,4 @@
 results*
 temp*
 wandb/
+__pycache__/
