@@ -1,0 +1,375 @@
+0.2 dinov2 0
+Namespace(model='dinov2', batch_size=256, num_classes=30, epochs=200, lr=0.01, data_dir='/data/eSkin_Data/All_Images', save_dir='results/', train_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.2/train.csv', test_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.2/test.csv', seed=0, mode='linear')
+linear MODE Total parameters: 86603550, Trainable parameters: 23070
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [54, 70, 34, 1018, 147, 22, 18, 56, 171, 96, 36, 148, 48, 140, 106, 35, 22, 32, 150, 106, 217, 920, 21, 16, 149, 193, 102, 61, 14, 341]
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [14, 19, 12, 232, 26, 4, 8, 6, 35, 20, 14, 36, 8, 58, 22, 7, 9, 4, 31, 34, 41, 207, 3, 7, 43, 51, 23, 10, 6, 79]
+Train dataset size: 4543
+Test dataset size: 1069
+Training features shape: (4543, 768)
+Test features shape: (1069, 768)
+Epoch [1/200], Loss: 3.1025, Accuracy: 0.4321
+Validation Loss: 2.4456, Validation Accuracy: 0.5341, F1: 0.2686, Accuracy: 0.5341, Precision: 0.3201, Recall: 0.2877
+Epoch [41/200], Loss: 0.0507, Accuracy: 0.9967
+Validation Loss: 3.3171, Validation Accuracy: 0.5351, F1: 0.3214, Accuracy: 0.5351, Precision: 0.3473, Recall: 0.3296
+Epoch [81/200], Loss: 0.0150, Accuracy: 1.0000
+Validation Loss: 3.9143, Validation Accuracy: 0.5304, F1: 0.3161, Accuracy: 0.5304, Precision: 0.3451, Recall: 0.3201
+Epoch [121/200], Loss: 0.0076, Accuracy: 1.0000
+Validation Loss: 4.3294, Validation Accuracy: 0.5285, F1: 0.3163, Accuracy: 0.5285, Precision: 0.3418, Recall: 0.3240
+Epoch [161/200], Loss: 0.0045, Accuracy: 1.0000
+Validation Loss: 4.6881, Validation Accuracy: 0.5267, F1: 0.3145, Accuracy: 0.5267, Precision: 0.3398, Recall: 0.3225
+FINAL RESULTS:
+
+0.5650  0.3501  0.3943  0.3485
+0.5229  0.3074  0.3371  0.3136
+0.2 dinov2 1
+Namespace(model='dinov2', batch_size=256, num_classes=30, epochs=200, lr=0.01, data_dir='/data/eSkin_Data/All_Images', save_dir='results/', train_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.2/train.csv', test_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.2/test.csv', seed=1, mode='linear')
+linear MODE Total parameters: 86603550, Trainable parameters: 23070
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [54, 70, 34, 1018, 147, 22, 18, 56, 171, 96, 36, 148, 48, 140, 106, 35, 22, 32, 150, 106, 217, 920, 21, 16, 149, 193, 102, 61, 14, 341]
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [14, 19, 12, 232, 26, 4, 8, 6, 35, 20, 14, 36, 8, 58, 22, 7, 9, 4, 31, 34, 41, 207, 3, 7, 43, 51, 23, 10, 6, 79]
+Train dataset size: 4543
+Test dataset size: 1069
+Training features shape: (4543, 768)
+Test features shape: (1069, 768)
+Epoch [1/200], Loss: 3.2840, Accuracy: 0.4248
+Validation Loss: 2.5813, Validation Accuracy: 0.4920, F1: 0.2145, Accuracy: 0.4920, Precision: 0.2187, Recall: 0.2441
+Epoch [41/200], Loss: 0.0496, Accuracy: 0.9976
+Validation Loss: 3.1874, Validation Accuracy: 0.5491, F1: 0.3276, Accuracy: 0.5491, Precision: 0.3694, Recall: 0.3206
+Epoch [81/200], Loss: 0.0154, Accuracy: 1.0000
+Validation Loss: 3.7330, Validation Accuracy: 0.5491, F1: 0.3375, Accuracy: 0.5491, Precision: 0.4131, Recall: 0.3270
+Epoch [121/200], Loss: 0.0083, Accuracy: 1.0000
+Validation Loss: 4.1118, Validation Accuracy: 0.5529, F1: 0.3531, Accuracy: 0.5529, Precision: 0.4137, Recall: 0.3413
+Epoch [161/200], Loss: 0.0044, Accuracy: 1.0000
+Validation Loss: 4.4528, Validation Accuracy: 0.5500, F1: 0.3501, Accuracy: 0.5500, Precision: 0.4122, Recall: 0.3379
+FINAL RESULTS:
+
+0.5884  0.3471  0.3966  0.3558
+0.5444  0.3502  0.4093  0.3397
+0.2 dinov2 42
+Namespace(model='dinov2', batch_size=256, num_classes=30, epochs=200, lr=0.01, data_dir='/data/eSkin_Data/All_Images', save_dir='results/', train_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.2/train.csv', test_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.2/test.csv', seed=42, mode='linear')
+linear MODE Total parameters: 86603550, Trainable parameters: 23070
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [54, 70, 34, 1018, 147, 22, 18, 56, 171, 96, 36, 148, 48, 140, 106, 35, 22, 32, 150, 106, 217, 920, 21, 16, 149, 193, 102, 61, 14, 341]
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [14, 19, 12, 232, 26, 4, 8, 6, 35, 20, 14, 36, 8, 58, 22, 7, 9, 4, 31, 34, 41, 207, 3, 7, 43, 51, 23, 10, 6, 79]
+Train dataset size: 4543
+Test dataset size: 1069
+Training features shape: (4543, 768)
+Test features shape: (1069, 768)
+Epoch [1/200], Loss: 3.1175, Accuracy: 0.4239
+Validation Loss: 2.5105, Validation Accuracy: 0.4790, F1: 0.2636, Accuracy: 0.4790, Precision: 0.2897, Recall: 0.3032
+Epoch [41/200], Loss: 0.0598, Accuracy: 0.9916
+Validation Loss: 3.2880, Validation Accuracy: 0.5304, F1: 0.3520, Accuracy: 0.5304, Precision: 0.3959, Recall: 0.3485
+Epoch [81/200], Loss: 0.0184, Accuracy: 0.9996
+Validation Loss: 3.8302, Validation Accuracy: 0.5313, F1: 0.3582, Accuracy: 0.5313, Precision: 0.3907, Recall: 0.3547
+Epoch [121/200], Loss: 0.0076, Accuracy: 1.0000
+Validation Loss: 4.2471, Validation Accuracy: 0.5435, F1: 0.3656, Accuracy: 0.5435, Precision: 0.4085, Recall: 0.3608
+Epoch [161/200], Loss: 0.0047, Accuracy: 1.0000
+Validation Loss: 4.5611, Validation Accuracy: 0.5370, F1: 0.3620, Accuracy: 0.5370, Precision: 0.4018, Recall: 0.3583
+FINAL RESULTS:
+
+0.5762  0.3212  0.3547  0.3259
+0.5370  0.3616  0.4162  0.3562
+0.3 dinov2 0
+Namespace(model='dinov2', batch_size=256, num_classes=30, epochs=200, lr=0.01, data_dir='/data/eSkin_Data/All_Images', save_dir='results/', train_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.3/train.csv', test_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.3/test.csv', seed=0, mode='linear')
+linear MODE Total parameters: 86603550, Trainable parameters: 23070
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [49, 65, 32, 873, 134, 20, 18, 52, 156, 85, 30, 133, 42, 124, 96, 34, 18, 24, 137, 89, 198, 813, 15, 14, 130, 151, 78, 56, 14, 298]
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [19, 24, 14, 377, 39, 6, 8, 10, 50, 31, 20, 51, 14, 74, 32, 8, 13, 12, 44, 51, 60, 314, 9, 9, 62, 93, 47, 15, 6, 122]
+Train dataset size: 3978
+Test dataset size: 1634
+Training features shape: (3978, 768)
+Test features shape: (1634, 768)
+Epoch [1/200], Loss: 3.3689, Accuracy: 0.4062
+Validation Loss: 2.6281, Validation Accuracy: 0.4982, F1: 0.2339, Accuracy: 0.4982, Precision: 0.2768, Recall: 0.2645
+Epoch [41/200], Loss: 0.0384, Accuracy: 0.9995
+Validation Loss: 3.2221, Validation Accuracy: 0.5428, F1: 0.3076, Accuracy: 0.5428, Precision: 0.3861, Recall: 0.3024
+Epoch [81/200], Loss: 0.0133, Accuracy: 1.0000
+Validation Loss: 3.7921, Validation Accuracy: 0.5330, F1: 0.3066, Accuracy: 0.5330, Precision: 0.3947, Recall: 0.3009
+Epoch [121/200], Loss: 0.0068, Accuracy: 1.0000
+Validation Loss: 4.1796, Validation Accuracy: 0.5324, F1: 0.3016, Accuracy: 0.5324, Precision: 0.3789, Recall: 0.2968
+Epoch [161/200], Loss: 0.0039, Accuracy: 1.0000
+Validation Loss: 4.4708, Validation Accuracy: 0.5294, F1: 0.2980, Accuracy: 0.5294, Precision: 0.3664, Recall: 0.2940
+FINAL RESULTS:
+
+0.5679  0.3141  0.4480  0.2967
+0.5275  0.2953  0.3645  0.2931
+0.3 dinov2 1
+Namespace(model='dinov2', batch_size=256, num_classes=30, epochs=200, lr=0.01, data_dir='/data/eSkin_Data/All_Images', save_dir='results/', train_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.3/train.csv', test_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.3/test.csv', seed=1, mode='linear')
+linear MODE Total parameters: 86603550, Trainable parameters: 23070
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [49, 65, 32, 873, 134, 20, 18, 52, 156, 85, 30, 133, 42, 124, 96, 34, 18, 24, 137, 89, 198, 813, 15, 14, 130, 151, 78, 56, 14, 298]
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [19, 24, 14, 377, 39, 6, 8, 10, 50, 31, 20, 51, 14, 74, 32, 8, 13, 12, 44, 51, 60, 314, 9, 9, 62, 93, 47, 15, 6, 122]
+Train dataset size: 3978
+Test dataset size: 1634
+Training features shape: (3978, 768)
+Test features shape: (1634, 768)
+Epoch [1/200], Loss: 3.2018, Accuracy: 0.4077
+Validation Loss: 2.4147, Validation Accuracy: 0.5104, F1: 0.2466, Accuracy: 0.5104, Precision: 0.2805, Recall: 0.2565
+Epoch [41/200], Loss: 0.0466, Accuracy: 0.9967
+Validation Loss: 3.2097, Validation Accuracy: 0.5502, F1: 0.3305, Accuracy: 0.5502, Precision: 0.3766, Recall: 0.3207
+Epoch [81/200], Loss: 0.0144, Accuracy: 1.0000
+Validation Loss: 3.7859, Validation Accuracy: 0.5428, F1: 0.3204, Accuracy: 0.5428, Precision: 0.3629, Recall: 0.3120
+Epoch [121/200], Loss: 0.0076, Accuracy: 1.0000
+Validation Loss: 4.1799, Validation Accuracy: 0.5361, F1: 0.3179, Accuracy: 0.5361, Precision: 0.3626, Recall: 0.3084
+Epoch [161/200], Loss: 0.0042, Accuracy: 1.0000
+Validation Loss: 4.4959, Validation Accuracy: 0.5330, F1: 0.3149, Accuracy: 0.5330, Precision: 0.3557, Recall: 0.3075
+FINAL RESULTS:
+
+0.5734  0.3219  0.3388  0.3208
+0.5288  0.3121  0.3520  0.3047
+0.3 dinov2 42
+Namespace(model='dinov2', batch_size=256, num_classes=30, epochs=200, lr=0.01, data_dir='/data/eSkin_Data/All_Images', save_dir='results/', train_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.3/train.csv', test_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.3/test.csv', seed=42, mode='linear')
+linear MODE Total parameters: 86603550, Trainable parameters: 23070
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [49, 65, 32, 873, 134, 20, 18, 52, 156, 85, 30, 133, 42, 124, 96, 34, 18, 24, 137, 89, 198, 813, 15, 14, 130, 151, 78, 56, 14, 298]
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [19, 24, 14, 377, 39, 6, 8, 10, 50, 31, 20, 51, 14, 74, 32, 8, 13, 12, 44, 51, 60, 314, 9, 9, 62, 93, 47, 15, 6, 122]
+Train dataset size: 3978
+Test dataset size: 1634
+Training features shape: (3978, 768)
+Test features shape: (1634, 768)
+Epoch [1/200], Loss: 3.3108, Accuracy: 0.4274
+Validation Loss: 2.4972, Validation Accuracy: 0.5416, F1: 0.2548, Accuracy: 0.5416, Precision: 0.3063, Recall: 0.2678
+Epoch [41/200], Loss: 0.0434, Accuracy: 0.9957
+Validation Loss: 3.2277, Validation Accuracy: 0.5496, F1: 0.3356, Accuracy: 0.5496, Precision: 0.4159, Recall: 0.3275
+Epoch [81/200], Loss: 0.0129, Accuracy: 1.0000
+Validation Loss: 3.7975, Validation Accuracy: 0.5459, F1: 0.3208, Accuracy: 0.5459, Precision: 0.3772, Recall: 0.3145
+Epoch [121/200], Loss: 0.0067, Accuracy: 1.0000
+Validation Loss: 4.1861, Validation Accuracy: 0.5465, F1: 0.3192, Accuracy: 0.5465, Precision: 0.3708, Recall: 0.3126
+Epoch [161/200], Loss: 0.0039, Accuracy: 1.0000
+Validation Loss: 4.4996, Validation Accuracy: 0.5471, F1: 0.3211, Accuracy: 0.5471, Precision: 0.3746, Recall: 0.3140
+FINAL RESULTS:
+
+0.5679  0.3214  0.3696  0.3114
+0.5416  0.3154  0.3664  0.3111
+0.4 dinov2 0
+Namespace(model='dinov2', batch_size=256, num_classes=30, epochs=200, lr=0.01, data_dir='/data/eSkin_Data/All_Images', save_dir='results/', train_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.4/train.csv', test_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.4/test.csv', seed=0, mode='linear')
+linear MODE Total parameters: 86603550, Trainable parameters: 23070
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [46, 53, 26, 761, 102, 17, 16, 47, 134, 69, 28, 115, 34, 97, 78, 30, 12, 21, 119, 74, 171, 722, 13, 13, 109, 125, 64, 47, 10, 256]
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [22, 36, 20, 489, 71, 9, 10, 15, 72, 47, 22, 69, 22, 101, 50, 12, 19, 15, 62, 66, 87, 405, 11, 10, 83, 119, 61, 24, 10, 164]
+Train dataset size: 3409
+Test dataset size: 2203
+Training features shape: (3409, 768)
+Test features shape: (2203, 768)
+Epoch [1/200], Loss: 3.0112, Accuracy: 0.4233
+Validation Loss: 2.7146, Validation Accuracy: 0.4852, F1: 0.2120, Accuracy: 0.4852, Precision: 0.3173, Recall: 0.2205
+Epoch [41/200], Loss: 0.0307, Accuracy: 0.9991
+Validation Loss: 3.5636, Validation Accuracy: 0.5352, F1: 0.2821, Accuracy: 0.5352, Precision: 0.3435, Recall: 0.2686
+Epoch [81/200], Loss: 0.0092, Accuracy: 1.0000
+Validation Loss: 4.0771, Validation Accuracy: 0.5279, F1: 0.2816, Accuracy: 0.5279, Precision: 0.3376, Recall: 0.2702
+Epoch [121/200], Loss: 0.0050, Accuracy: 1.0000
+Validation Loss: 4.4149, Validation Accuracy: 0.5234, F1: 0.2810, Accuracy: 0.5234, Precision: 0.3337, Recall: 0.2721
+Epoch [161/200], Loss: 0.0030, Accuracy: 1.0000
+Validation Loss: 4.7298, Validation Accuracy: 0.5238, F1: 0.2809, Accuracy: 0.5238, Precision: 0.3356, Recall: 0.2709
+FINAL RESULTS:
+
+0.5474  0.3070  0.3747  0.3018
+0.5243  0.2807  0.3355  0.2704
+0.4 dinov2 1
+Namespace(model='dinov2', batch_size=256, num_classes=30, epochs=200, lr=0.01, data_dir='/data/eSkin_Data/All_Images', save_dir='results/', train_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.4/train.csv', test_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.4/test.csv', seed=1, mode='linear')
+linear MODE Total parameters: 86603550, Trainable parameters: 23070
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [46, 53, 26, 761, 102, 17, 16, 47, 134, 69, 28, 115, 34, 97, 78, 30, 12, 21, 119, 74, 171, 722, 13, 13, 109, 125, 64, 47, 10, 256]
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [22, 36, 20, 489, 71, 9, 10, 15, 72, 47, 22, 69, 22, 101, 50, 12, 19, 15, 62, 66, 87, 405, 11, 10, 83, 119, 61, 24, 10, 164]
+Train dataset size: 3409
+Test dataset size: 2203
+Training features shape: (3409, 768)
+Test features shape: (2203, 768)
+Epoch [1/200], Loss: 3.1656, Accuracy: 0.4069
+Validation Loss: 2.6193, Validation Accuracy: 0.4911, F1: 0.2455, Accuracy: 0.4911, Precision: 0.2797, Recall: 0.2586
+Epoch [41/200], Loss: 0.0269, Accuracy: 0.9994
+Validation Loss: 3.4846, Validation Accuracy: 0.5393, F1: 0.3033, Accuracy: 0.5393, Precision: 0.3393, Recall: 0.2936
+Epoch [81/200], Loss: 0.0096, Accuracy: 1.0000
+Validation Loss: 4.0206, Validation Accuracy: 0.5411, F1: 0.3000, Accuracy: 0.5411, Precision: 0.3395, Recall: 0.2887
+Epoch [121/200], Loss: 0.0049, Accuracy: 1.0000
+Validation Loss: 4.3504, Validation Accuracy: 0.5424, F1: 0.3027, Accuracy: 0.5424, Precision: 0.3437, Recall: 0.2916
+Epoch [161/200], Loss: 0.0030, Accuracy: 1.0000
+Validation Loss: 4.6547, Validation Accuracy: 0.5424, F1: 0.3034, Accuracy: 0.5424, Precision: 0.3374, Recall: 0.2930
+FINAL RESULTS:
+
+0.5556  0.3120  0.3639  0.2964
+0.5374  0.3021  0.3362  0.2923
+0.4 dinov2 42
+Namespace(model='dinov2', batch_size=256, num_classes=30, epochs=200, lr=0.01, data_dir='/data/eSkin_Data/All_Images', save_dir='results/', train_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.4/train.csv', test_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.4/test.csv', seed=42, mode='linear')
+linear MODE Total parameters: 86603550, Trainable parameters: 23070
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [46, 53, 26, 761, 102, 17, 16, 47, 134, 69, 28, 115, 34, 97, 78, 30, 12, 21, 119, 74, 171, 722, 13, 13, 109, 125, 64, 47, 10, 256]
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [22, 36, 20, 489, 71, 9, 10, 15, 72, 47, 22, 69, 22, 101, 50, 12, 19, 15, 62, 66, 87, 405, 11, 10, 83, 119, 61, 24, 10, 164]
+Train dataset size: 3409
+Test dataset size: 2203
+Training features shape: (3409, 768)
+Test features shape: (2203, 768)
+Epoch [1/200], Loss: 3.0564, Accuracy: 0.4224
+Validation Loss: 2.7226, Validation Accuracy: 0.4771, F1: 0.2259, Accuracy: 0.4771, Precision: 0.2927, Recall: 0.2434
+Epoch [41/200], Loss: 0.0265, Accuracy: 1.0000
+Validation Loss: 3.4805, Validation Accuracy: 0.5184, F1: 0.2865, Accuracy: 0.5184, Precision: 0.3392, Recall: 0.2708
+Epoch [81/200], Loss: 0.0091, Accuracy: 1.0000
+Validation Loss: 3.9602, Validation Accuracy: 0.5211, F1: 0.2867, Accuracy: 0.5211, Precision: 0.3406, Recall: 0.2712
+Epoch [121/200], Loss: 0.0048, Accuracy: 1.0000
+Validation Loss: 4.3204, Validation Accuracy: 0.5188, F1: 0.2921, Accuracy: 0.5188, Precision: 0.3394, Recall: 0.2787
+Epoch [161/200], Loss: 0.0029, Accuracy: 1.0000
+Validation Loss: 4.6291, Validation Accuracy: 0.5211, F1: 0.2914, Accuracy: 0.5211, Precision: 0.3400, Recall: 0.2774
+FINAL RESULTS:
+
+0.5411  0.2894  0.3399  0.2870
+0.5197  0.2922  0.3350  0.2781
+0.5 dinov2 0
+Namespace(model='dinov2', batch_size=256, num_classes=30, epochs=200, lr=0.01, data_dir='/data/eSkin_Data/All_Images', save_dir='results/', train_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.5/train.csv', test_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.5/test.csv', seed=0, mode='linear')
+linear MODE Total parameters: 86603550, Trainable parameters: 23070
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [41, 43, 22, 515, 86, 17, 13, 39, 111, 59, 22, 90, 28, 87, 60, 27, 11, 19, 102, 57, 142, 601, 13, 13, 86, 93, 52, 42, 10, 219]
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [27, 46, 24, 735, 87, 9, 13, 23, 95, 57, 28, 94, 28, 111, 68, 15, 20, 17, 79, 83, 116, 526, 11, 10, 106, 151, 73, 29, 10, 201]
+Train dataset size: 2720
+Test dataset size: 2892
+Training features shape: (2720, 768)
+Test features shape: (2892, 768)
+Epoch [1/200], Loss: 3.6697, Accuracy: 0.3757
+Validation Loss: 2.7003, Validation Accuracy: 0.5318, F1: 0.2248, Accuracy: 0.5318, Precision: 0.2567, Recall: 0.2418
+Epoch [41/200], Loss: 0.0219, Accuracy: 1.0000
+Validation Loss: 3.2691, Validation Accuracy: 0.5439, F1: 0.2747, Accuracy: 0.5439, Precision: 0.3225, Recall: 0.2619
+Epoch [81/200], Loss: 0.0074, Accuracy: 1.0000
+Validation Loss: 3.7219, Validation Accuracy: 0.5401, F1: 0.2756, Accuracy: 0.5401, Precision: 0.3155, Recall: 0.2629
+Epoch [121/200], Loss: 0.0040, Accuracy: 1.0000
+Validation Loss: 4.0580, Validation Accuracy: 0.5370, F1: 0.2657, Accuracy: 0.5370, Precision: 0.3109, Recall: 0.2539
+Epoch [161/200], Loss: 0.0024, Accuracy: 1.0000
+Validation Loss: 4.3122, Validation Accuracy: 0.5360, F1: 0.2665, Accuracy: 0.5360, Precision: 0.3131, Recall: 0.2540
+FINAL RESULTS:
+
+0.5491  0.2706  0.3305  0.2517
+0.5356  0.2720  0.3153  0.2587
+0.5 dinov2 1
+Namespace(model='dinov2', batch_size=256, num_classes=30, epochs=200, lr=0.01, data_dir='/data/eSkin_Data/All_Images', save_dir='results/', train_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.5/train.csv', test_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.5/test.csv', seed=1, mode='linear')
+linear MODE Total parameters: 86603550, Trainable parameters: 23070
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [41, 43, 22, 515, 86, 17, 13, 39, 111, 59, 22, 90, 28, 87, 60, 27, 11, 19, 102, 57, 142, 601, 13, 13, 86, 93, 52, 42, 10, 219]
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [27, 46, 24, 735, 87, 9, 13, 23, 95, 57, 28, 94, 28, 111, 68, 15, 20, 17, 79, 83, 116, 526, 11, 10, 106, 151, 73, 29, 10, 201]
+Train dataset size: 2720
+Test dataset size: 2892
+Training features shape: (2720, 768)
+Test features shape: (2892, 768)
+Epoch [1/200], Loss: 3.6353, Accuracy: 0.3820
+Validation Loss: 2.7308, Validation Accuracy: 0.5003, F1: 0.2060, Accuracy: 0.5003, Precision: 0.2194, Recall: 0.2402
+Epoch [41/200], Loss: 0.0228, Accuracy: 1.0000
+Validation Loss: 3.2914, Validation Accuracy: 0.5453, F1: 0.2926, Accuracy: 0.5453, Precision: 0.3757, Recall: 0.2767
+Epoch [81/200], Loss: 0.0080, Accuracy: 1.0000
+Validation Loss: 3.7600, Validation Accuracy: 0.5460, F1: 0.2934, Accuracy: 0.5460, Precision: 0.3555, Recall: 0.2796
+Epoch [121/200], Loss: 0.0042, Accuracy: 1.0000
+Validation Loss: 4.0699, Validation Accuracy: 0.5425, F1: 0.2893, Accuracy: 0.5425, Precision: 0.3415, Recall: 0.2766
+Epoch [161/200], Loss: 0.0026, Accuracy: 1.0000
+Validation Loss: 4.3334, Validation Accuracy: 0.5450, F1: 0.2897, Accuracy: 0.5450, Precision: 0.3399, Recall: 0.2777
+FINAL RESULTS:
+
+0.5564  0.2833  0.3509  0.2674
+0.5415  0.2874  0.3386  0.2755
+0.5 dinov2 42
+Namespace(model='dinov2', batch_size=256, num_classes=30, epochs=200, lr=0.01, data_dir='/data/eSkin_Data/All_Images', save_dir='results/', train_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.5/train.csv', test_csv_path='/media/janet/nips25_benchmark/classification_splits/random/test_ratio=0.5/test.csv', seed=42, mode='linear')
+linear MODE Total parameters: 86603550, Trainable parameters: 23070
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [41, 43, 22, 515, 86, 17, 13, 39, 111, 59, 22, 90, 28, 87, 60, 27, 11, 19, 102, 57, 142, 601, 13, 13, 86, 93, 52, 42, 10, 219]
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [27, 46, 24, 735, 87, 9, 13, 23, 95, 57, 28, 94, 28, 111, 68, 15, 20, 17, 79, 83, 116, 526, 11, 10, 106, 151, 73, 29, 10, 201]
+Train dataset size: 2720
+Test dataset size: 2892
+Training features shape: (2720, 768)
+Test features shape: (2892, 768)
+Epoch [1/200], Loss: 3.7377, Accuracy: 0.3651
+Validation Loss: 2.8387, Validation Accuracy: 0.5031, F1: 0.2207, Accuracy: 0.5031, Precision: 0.2613, Recall: 0.2397
+Epoch [41/200], Loss: 0.0223, Accuracy: 1.0000
+Validation Loss: 3.1809, Validation Accuracy: 0.5432, F1: 0.2798, Accuracy: 0.5432, Precision: 0.3722, Recall: 0.2671
+Epoch [81/200], Loss: 0.0079, Accuracy: 1.0000
+Validation Loss: 3.6735, Validation Accuracy: 0.5425, F1: 0.2751, Accuracy: 0.5425, Precision: 0.3538, Recall: 0.2636
+Epoch [121/200], Loss: 0.0042, Accuracy: 1.0000
+Validation Loss: 3.9725, Validation Accuracy: 0.5373, F1: 0.2687, Accuracy: 0.5373, Precision: 0.3493, Recall: 0.2580
+Epoch [161/200], Loss: 0.0026, Accuracy: 1.0000
+Validation Loss: 4.2223, Validation Accuracy: 0.5367, F1: 0.2675, Accuracy: 0.5367, Precision: 0.3455, Recall: 0.2575
+FINAL RESULTS:
+
+0.5571  0.2835  0.3814  0.2648
+0.5346  0.2676  0.3463  0.2577
+999 dinov2 0
+Namespace(model='dinov2', batch_size=256, num_classes=30, epochs=200, lr=0.01, data_dir='/data/eSkin_Data/All_Images', save_dir='results/', train_csv_path='/media/janet/nips25_benchmark/classification_splits/uniform/test_number=5/train.csv', test_csv_path='/media/janet/nips25_benchmark/classification_splits/uniform/test_number=5/test.csv', seed=0, mode='linear')
+linear MODE Total parameters: 86603550, Trainable parameters: 23070
+29 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'yaws': 28}
+Label count: [50, 73, 35, 1231, 157, 5, 10, 41, 194, 106, 35, 165, 33, 174, 97, 23, 13, 26, 163, 125, 250, 1112, 6, 10, 181, 227, 108, 53, 407]
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [18, 16, 11, 19, 16, 21, 16, 21, 12, 10, 15, 19, 23, 24, 31, 19, 18, 10, 18, 15, 8, 15, 18, 13, 11, 17, 17, 18, 20, 13]
+Train dataset size: 5110
+Test dataset size: 502
+Training features shape: (5110, 768)
+Test features shape: (502, 768)
+Epoch [1/200], Loss: 3.0542, Accuracy: 0.4523
+Validation Loss: 6.6196, Validation Accuracy: 0.2231, F1: 0.2146, Accuracy: 0.2231, Precision: 0.2820, Recall: 0.2444
+Epoch [41/200], Loss: 0.0839, Accuracy: 0.9851
+Validation Loss: 9.5676, Validation Accuracy: 0.2271, F1: 0.2036, Accuracy: 0.2271, Precision: 0.2789, Recall: 0.2370
+Epoch [81/200], Loss: 0.0279, Accuracy: 0.9984
+Validation Loss: 11.3002, Validation Accuracy: 0.2251, F1: 0.2007, Accuracy: 0.2251, Precision: 0.2736, Recall: 0.2327
+Epoch [121/200], Loss: 0.0122, Accuracy: 1.0000
+Validation Loss: 12.3688, Validation Accuracy: 0.2231, F1: 0.1966, Accuracy: 0.2231, Precision: 0.2716, Recall: 0.2298
+Epoch [161/200], Loss: 0.0067, Accuracy: 0.9992
+Validation Loss: 23.2058, Validation Accuracy: 0.2171, F1: 0.1979, Accuracy: 0.2171, Precision: 0.2756, Recall: 0.2286
+FINAL RESULTS:
+
+0.2530  0.2281  0.2891  0.2623
+0.2211  0.2022  0.2966  0.2331
+999 dinov2 1
+Namespace(model='dinov2', batch_size=256, num_classes=30, epochs=200, lr=0.01, data_dir='/data/eSkin_Data/All_Images', save_dir='results/', train_csv_path='/media/janet/nips25_benchmark/classification_splits/uniform/test_number=5/train.csv', test_csv_path='/media/janet/nips25_benchmark/classification_splits/uniform/test_number=5/test.csv', seed=1, mode='linear')
+linear MODE Total parameters: 86603550, Trainable parameters: 23070
+29 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'yaws': 28}
+Label count: [50, 73, 35, 1231, 157, 5, 10, 41, 194, 106, 35, 165, 33, 174, 97, 23, 13, 26, 163, 125, 250, 1112, 6, 10, 181, 227, 108, 53, 407]
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [18, 16, 11, 19, 16, 21, 16, 21, 12, 10, 15, 19, 23, 24, 31, 19, 18, 10, 18, 15, 8, 15, 18, 13, 11, 17, 17, 18, 20, 13]
+Train dataset size: 5110
+Test dataset size: 502
+Training features shape: (5110, 768)
+Test features shape: (502, 768)
+Epoch [1/200], Loss: 2.9373, Accuracy: 0.4642
+Validation Loss: 7.4001, Validation Accuracy: 0.2012, F1: 0.1844, Accuracy: 0.2012, Precision: 0.2217, Recall: 0.2289
+Epoch [41/200], Loss: 0.0979, Accuracy: 0.9746
+Validation Loss: 9.8391, Validation Accuracy: 0.2092, F1: 0.1850, Accuracy: 0.2092, Precision: 0.2517, Recall: 0.2249
+Epoch [81/200], Loss: 0.0299, Accuracy: 0.9965
+Validation Loss: 11.2425, Validation Accuracy: 0.2231, F1: 0.2027, Accuracy: 0.2231, Precision: 0.2910, Recall: 0.2413
+Epoch [121/200], Loss: 0.0123, Accuracy: 1.0000
+Validation Loss: 12.3710, Validation Accuracy: 0.2211, F1: 0.2005, Accuracy: 0.2211, Precision: 0.2734, Recall: 0.2369
+Epoch [161/200], Loss: 0.0078, Accuracy: 1.0000
+Validation Loss: 13.2664, Validation Accuracy: 0.2231, F1: 0.2042, Accuracy: 0.2231, Precision: 0.2769, Recall: 0.2388
+FINAL RESULTS:
+
+0.2410  0.2348  0.3458  0.2596
+0.2291  0.2111  0.2717  0.2456
+999 dinov2 42
+Namespace(model='dinov2', batch_size=256, num_classes=30, epochs=200, lr=0.01, data_dir='/data/eSkin_Data/All_Images', save_dir='results/', train_csv_path='/media/janet/nips25_benchmark/classification_splits/uniform/test_number=5/train.csv', test_csv_path='/media/janet/nips25_benchmark/classification_splits/uniform/test_number=5/test.csv', seed=42, mode='linear')
+linear MODE Total parameters: 86603550, Trainable parameters: 23070
+29 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'yaws': 28}
+Label count: [50, 73, 35, 1231, 157, 5, 10, 41, 194, 106, 35, 165, 33, 174, 97, 23, 13, 26, 163, 125, 250, 1112, 6, 10, 181, 227, 108, 53, 407]
+30 conditions found: {'abscess': 0, 'acne': 1, 'atopic dermatitis': 2, 'buruli ulcer': 3, 'contact dermatitis': 4, 'creeping eruption': 5, 'cyst': 6, 'eczema': 7, 'erysipelas': 8, 'folliculitis': 9, 'herpes zoster': 10, 'impetigo': 11, 'keratosis': 12, 'leprosy': 13, 'lichen planus': 14, 'lipome': 15, 'lymphatic filariasis': 16, 'mycetoma': 17, 'necrotizing fasciitis': 18, 'pityriasis versicolor': 19, 'prurigo': 20, 'scabies': 21, 'seborrhoeic dermatitis': 22, 'tinea': 23, 'tinea capitis': 24, 'tinea corporis': 25, 'varicelle': 26, 'vitiligo': 27, 'xerosis': 28, 'yaws': 29}
+Label count: [18, 16, 11, 19, 16, 21, 16, 21, 12, 10, 15, 19, 23, 24, 31, 19, 18, 10, 18, 15, 8, 15, 18, 13, 11, 17, 17, 18, 20, 13]
+Train dataset size: 5110
+Test dataset size: 502
+Training features shape: (5110, 768)
+Test features shape: (502, 768)
+Epoch [1/200], Loss: 2.8689, Accuracy: 0.4620
+Validation Loss: 8.7503, Validation Accuracy: 0.1912, F1: 0.1624, Accuracy: 0.1912, Precision: 0.2064, Recall: 0.2056
+Epoch [41/200], Loss: 0.0915, Accuracy: 0.9806
+Validation Loss: 9.9351, Validation Accuracy: 0.2231, F1: 0.2094, Accuracy: 0.2231, Precision: 0.3320, Recall: 0.2434
+Epoch [81/200], Loss: 0.0304, Accuracy: 0.9969
+Validation Loss: 11.6096, Validation Accuracy: 0.2151, F1: 0.1945, Accuracy: 0.2151, Precision: 0.2839, Recall: 0.2328
+Epoch [121/200], Loss: 0.0146, Accuracy: 0.9998
+Validation Loss: 12.8011, Validation Accuracy: 0.2112, F1: 0.1912, Accuracy: 0.2112, Precision: 0.2758, Recall: 0.2292
+Epoch [161/200], Loss: 0.3862, Accuracy: 0.8947
+Validation Loss: 25.9064, Validation Accuracy: 0.2112, F1: 0.2026, Accuracy: 0.2112, Precision: 0.3206, Recall: 0.2252
+FINAL RESULTS:
+
+0.2311  0.2135  0.3246  0.2452
+0.2072  0.1869  0.2557  0.2268
