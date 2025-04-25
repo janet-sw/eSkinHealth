@@ -2,6 +2,7 @@ import torchvision.models as models
 import torch
 import timm
 import re
+import clip
 
 vit_model_dict = {
     'vitb32': 'vit_base_patch32_224',
@@ -14,6 +15,14 @@ vit_model_dict = {
     'vitl14_clip': 'vit_large_patch14_clip_224',
     'vith14_clip': 'vit_huge_patch14_clip_224',
 }
+
+clip_model_dict = {
+    'clip_vitb32': 'ViT-B/32',
+    'clip_vitb16': 'ViT-B/16',
+    'clip_resnet50': 'RN50',
+}
+
+DEFAULT_TEMPLATE = "This is a photo of a {}."
 
 def prepare_vm(model_name, num_classes, mode='linear', lr=1e-3):
     encoder_params, clf_params = [], []
@@ -82,3 +91,33 @@ def prepare_vm(model_name, num_classes, mode='linear', lr=1e-3):
     print(f'{mode} MODE Total parameters: {total_params}, Trainable parameters: {trainable_params}')
     
     return model, optimizer, hook_layer
+
+def convert_models_to_fp32(model):
+    for p in model.parameters():
+        p.data = p.data.float()
+        if p.grad:
+            p.grad.data = p.grad.data.float()
+            
+def get_text_ensemble_embedding(classnames, templates, model):
+    device = next(model.parameters()).device
+    with torch.no_grad():
+        zeroshot_weights = []
+        for classname in classnames:
+            texts = [template.format(classname) for template in templates]
+            texts = clip.tokenize(texts).to(device)
+            class_embeddings = model.encode_text(texts)
+            class_embeddings /= class_embeddings.norm(dim=-1, keepdim=True)
+            class_embedding = class_embeddings.mean(dim=0)
+            class_embedding /= class_embedding.norm()
+            zeroshot_weights.append(class_embedding)
+        zeroshot_weights = torch.stack(zeroshot_weights, dim=1).to(device)
+    return zeroshot_weights
+
+def prepare_vlm(model_name, mode='zero_shot', lr=1e-3):
+    if mode == 'zero_shot':
+        model, preprocess = clip.load(clip_model_dict[model_name], device='cpu')
+        model.eval()
+        
+        return model, preprocess
+        
+        
