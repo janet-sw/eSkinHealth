@@ -242,7 +242,7 @@ if __name__ == '__main__':
     # torch.save({'y_true': label_list, 'y_pred': pred_list}, f"predictions_{len(label_list)}.pth")
     print(f"FINAL RESULTS:\n")
     print(f"{best_acc*100:.3f}  {best_f1*100:.3f}  {best_precision*100:.3f}  {best_recall*100:.3f}  {balanced_acc*100:.3f}")
-    print(f"{val_acc*100:.3f}  {f1*100:.3f}  {precision*100:.3f}  {recall*100:.3f}  {balanced_acc*100:.3f}")
+    # print(f"{val_acc*100:.3f}  {f1*100:.3f}  {precision*100:.3f}  {recall*100:.3f}  {balanced_acc*100:.3f}")
     print()
 
 

@@ -12,6 +12,7 @@ import os
 import pandas as pd
 import numpy as np
 from PIL import Image
+from transformers import AutoProcessor, AutoModel, AutoImageProcessor, SiglipProcessor
 
 
 import torch
@@ -51,12 +52,25 @@ if __name__ == '__main__':
     args.add_argument('--seed', type=int, default=42, help='random seed')
     args.add_argument('--mode', default='zero_shot', type=str, help='linear or full')
     args.add_argument('--reweight', action='store_true', help='reweight the classes')
+    args.add_argument('--template', type=str, default='default', help='template for text embedding')
 
     args = args.parse_args()
     print(args)
     device = torch.device("cuda")
     
-    model, preprocess = prepare_vlm(args.model, mode=args.mode)
+    # model, preprocess = prepare_vlm(args.model, mode=args.mode)
+    if 'clip_' in args.model:
+        model, preprocess = clip.load(clip_model_dict[args.model], device='cpu')
+        model.eval()
+    elif 'siglip' in args.model:
+        model = AutoModel.from_pretrained("google/siglip-base-patch16-224")
+        processor = AutoProcessor.from_pretrained("google/siglip-base-patch16-224")
+        img_processor = AutoImageProcessor.from_pretrained("google/siglip-base-patch16-224")
+        def preprocess(image):
+            processed = img_processor(images=image, return_tensors="pt")
+            pixel_values = processed["pixel_values"].squeeze(0)  # remove batch dimension
+            return pixel_values
+
     model = model.to(device)
     # Define data transformations
     train_dataset = SkinDataset(data_dir=args.data_dir,
@@ -72,22 +86,75 @@ if __name__ == '__main__':
     print()
     
     
-    templates = [DEFAULT_TEMPLATE]
+    if args.template == 'default':
+        template = DEFAULT_TEMPLATE
+    elif args.template == 'custom':
+        template = CUSTOM_TEMPLATE
+        import json
+
+        # Load JSON file
+        with open('./Model/visual_feature_summaries.json', 'r') as f:
+            description_dict = json.load(f)
     class_names = train_dataset.class_names
-    txt_emb = get_text_ensemble_embedding(class_names, templates, model)
-    print(len(templates), "templates")
-    print(f"{len(class_names)} Class Names: {class_names}")
-    print(f"Text Embedding Shape: {txt_emb.shape}")
-    print()
-    
-    emb_names = np.array([f"T{i // len(class_names)} {class_names[i % len(class_names)]}" for i in range(txt_emb.size(0))])
-    
-    def network(x):
-        x_emb = model.encode_image(x)
-        x_emb = x_emb / x_emb.norm(dim=-1, keepdim=True)
-        # logits = model.logit_scale.exp() * x_emb @ txt_emb.t()
-        logits = model.logit_scale.exp() * x_emb @ txt_emb
-        return logits
+    if 'clip_' in args.model:
+        templates = [template]
+        # txt_emb = get_text_ensemble_embedding(class_names, templates, model)
+        with torch.no_grad():
+            zeroshot_weights = []
+            for classname in class_names:
+                if args.template == 'default':
+                    texts = [template.format(classname) for template in templates]
+                elif args.template == 'custom':
+                    texts = [template.format(classname, description_dict[classname]) for template in templates]
+                texts = clip.tokenize(texts).to(device)
+                class_embeddings = model.encode_text(texts)
+                class_embeddings /= class_embeddings.norm(dim=-1, keepdim=True)
+                class_embedding = class_embeddings.mean(dim=0)
+                class_embedding /= class_embedding.norm()
+                zeroshot_weights.append(class_embedding)
+            zeroshot_weights = torch.stack(zeroshot_weights, dim=1).to(device)
+            
+        txt_emb = zeroshot_weights
+        print(len(templates), "templates")
+        print(f"{len(class_names)} Class Names: {class_names}")
+        print(f"Text Embedding Shape: {txt_emb.shape}")
+        print()
+        
+        emb_names = np.array([f"T{i // len(class_names)} {class_names[i % len(class_names)]}" for i in range(txt_emb.size(0))])
+        
+        def network(x):
+            x_emb = model.encode_image(x)
+            x_emb = x_emb / x_emb.norm(dim=-1, keepdim=True)
+            # logits = model.logit_scale.exp() * x_emb @ txt_emb.t()
+            logits = model.logit_scale.exp() * x_emb @ txt_emb
+            return logits
+        
+    elif 'siglip' in args.model:
+        with torch.no_grad():
+            if args.template == 'default':
+                texts = [template.format(classname) for classname in class_names]
+                text_inputs = processor(text=texts, padding="max_length", return_tensors="pt").to(device)
+            elif args.template == 'custom':
+                texts = [template.format(classname, description_dict[classname]) for classname in class_names]
+                text_inputs = processor(text=texts, padding=True, truncation=True, return_tensors="pt").to(device)
+                
+            text_embeddings = model.get_text_features(**text_inputs)
+            text_embeds = model.get_text_features(**text_inputs)
+            # normalize embeddings
+            text_embeds = text_embeds / text_embeds.norm(dim=-1, keepdim=True)
+            txt_emb = text_embeds
+        
+        def network(x):
+            # x is a preprocessed tensor (already passed through transform/preprocessor)
+            if len(x.shape) == 3:
+                x = x.unsqueeze(0)  # add batch dimension if needed
+
+            x_emb = model.get_image_features(pixel_values=x)
+            x_emb = x_emb / x_emb.norm(dim=-1, keepdim=True)
+
+            logits = model.logit_scale.exp() * (x_emb @ txt_emb.T)  # note the transpose
+            return logits
+        
 
     
     train_loader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True)
@@ -214,7 +281,7 @@ if __name__ == '__main__':
     # torch.save({'y_true': label_list, 'y_pred': pred_list}, f"predictions_{len(label_list)}.pth")
     print(f"FINAL RESULTS:\n")
     print(f"{best_acc*100:.3f}  {best_f1*100:.3f}  {best_precision*100:.3f}  {best_recall*100:.3f}  {balanced_acc*100:.3f}")
-    print(f"{val_acc*100:.3f}  {f1*100:.3f}  {precision*100:.3f}  {recall*100:.3f}  {balanced_acc*100:.3f}")
+    # print(f"{val_acc*100:.3f}  {f1*100:.3f}  {precision*100:.3f}  {recall*100:.3f}  {balanced_acc*100:.3f}")
     print()
 
 

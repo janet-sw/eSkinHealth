@@ -3,6 +3,7 @@ import torch
 import timm
 import re
 import clip
+# from transformers import AutoProcessor, AutoModel
 
 vit_model_dict = {
     'vitb32': 'vit_base_patch32_224',
@@ -23,6 +24,7 @@ clip_model_dict = {
 }
 
 DEFAULT_TEMPLATE = "This is a photo of a {}."
+CUSTOM_TEMPLATE = "This is a clinical image showing {}, characterized by {}."
 
 def prepare_vm(model_name, num_classes, mode='linear', lr=1e-3):
     encoder_params, clf_params = [], []
@@ -113,11 +115,17 @@ def get_text_ensemble_embedding(classnames, templates, model):
         zeroshot_weights = torch.stack(zeroshot_weights, dim=1).to(device)
     return zeroshot_weights
 
-def prepare_vlm(model_name, mode='zero_shot', lr=1e-3):
-    if mode == 'zero_shot':
-        model, preprocess = clip.load(clip_model_dict[model_name], device='cpu')
-        model.eval()
+# def prepare_vlm(model_name, mode='zero_shot', lr=1e-3):
+#     if mode == 'zero_shot':
+#         if 'clip' in model_name:
+#             model, preprocess = clip.load(clip_model_dict[model_name], device='cpu')
+#             model.eval()
+            
+#         elif 'siglip' in model_name:
+#             model = AutoModel.from_pretrained("google/siglip-base-patch16-224")
+#             preprocess = AutoProcessor.from_pretrained("google/siglip-base-patch16-224")
+#             model.eval()
         
-        return model, preprocess
+#         return model, preprocess
         
         
